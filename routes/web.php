@@ -52,16 +52,16 @@ Route::get('paises', function () {
     "Paraguay" => [
                     "capital"=> "Asunción",
                     "moneda"=> "Guaraní paraguayo",
-                    "poblacion"=> 7]
+                    "poblacion"=> 7],
+    "Argentina" => [
+                    "capital"=> "Buenos Aires",
+                    "moneda"=> "Peso Argentino",
+                    "poblacion"=> 44.94],
 ];
-  /* Recorrer el arreglo de paises */
 
-    foreach($paises as  $indice => $valor){
-    echo "<h1>$indice<h1>";
-    echo"<pre>";
-    print_r($valor["capital"]);
-    echo"</pre>";
-    echo"<hr />";
-    };
+//mostrar la vista de paises
+//llevando el arreglo de paises
+
+return view('paises')->with("naciones", $paises);
 
 });
